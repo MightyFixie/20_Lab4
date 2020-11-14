@@ -30,7 +30,7 @@ namespace _20_Lab4_4 {
 							Console.WriteLine("Продукт успішно активовано!");
 							license = License.Pro;
 							ApplicationLicense.AllowPro();
-							goto RegisterSuccessfull;
+							goto RegisterSuccessfull; //
 						}
 						break;
 					case ConsoleKey.Escape:
