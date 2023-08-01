@@ -9,7 +9,6 @@ namespace _20_Lab4_4 {
 		Pro
 	}
 	static class ApplicationLicense {
-		// Клас є статичним, оскільки екземпляр об'єкту один на цілу програму.
 
 		const string LicenseFile = "LICENSE";
 
@@ -17,13 +16,9 @@ namespace _20_Lab4_4 {
 			get; private set;
 		}
 		public static TimeSpan TrialTime {
-			// Якщо ця властивість дорівнює 0, це означає, що
-			// тріальний період наразі не дійсний.
 			get;
 		}
 		static ApplicationLicense() {
-			// Статичний конструктор, викликається принаймні
-			// коли програма вперше взаємодіє з цим класом.
 			try {
 				/*
 				BinaryReader reader = new BinaryReader(File.OpenRead("LICENSE"));
@@ -36,10 +31,10 @@ namespace _20_Lab4_4 {
 				reader.Close();
 				reader.Dispose();
 				*/
-				string key = File.ReadAllText(LicenseFile);  // Прочитати файл з ключем.
-				Pro = RegisterProduct(key);  // Перевірити дійсність ключа.
+				string key = File.ReadAllText(LicenseFile);
+				Pro = RegisterProduct(key);
 			} catch {
-				Pro = false;  // Прочитати файл не вдалося — режим Pro не працюватиме.
+				Pro = false;
 			}
 
 			if (!Pro) {
@@ -47,10 +42,6 @@ namespace _20_Lab4_4 {
 				DateTime expiredate = File.GetLastWriteTime(exepath).AddDays(7);
 				TimeSpan timeleft = expiredate - DateTime.Now;
 				if (timeleft.TotalDays > 7 || timeleft.Ticks <= 0) {
-					// Якщо змінити дату комп'ютера більш, ніж на 7 днів назад,
-					// тріальний період не працюватиме.
-					// Тріальний період вважається вичерпаним, якщо пройшло 7 днів
-					// після дати зміни файлу програми.
 					TrialTime = new TimeSpan(0);
 				} else {
 					TrialTime = timeleft;
