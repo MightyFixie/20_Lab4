@@ -7,7 +7,6 @@
 
 		}
 		public override string ToString() {
-			// Тут має бути щось.
 			return base.ToString();
 		}
 
