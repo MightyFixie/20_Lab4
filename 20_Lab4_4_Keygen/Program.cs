@@ -7,9 +7,6 @@ namespace _20_Lab4_4_Keygen {
 			Console.OutputEncoding = Encoding.UTF8;
 			Console.InputEncoding = Encoding.Unicode;
 
-			// Щоб повністю перевірити клас ApplicationLicense у дії,
-			// потрібно взяти звідкись ключ активації.
-			// Для цього я створюю генератор ключів.
 			string chars = "2346789BCDFGHJKMPQRTVWXY";
 			Random random = new Random();
 			char[] k = new char[25];
