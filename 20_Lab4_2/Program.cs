@@ -9,7 +9,6 @@ namespace _20_Lab4_2 {
 			Console.InputEncoding = Encoding.Unicode;
 			Console.Title = "20_Lab4_2";
 
-			// Тут має бути якийсь код, але невідомо, що повинен робити метод Main().
 		}
 	}
 }
