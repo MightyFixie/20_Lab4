@@ -124,7 +124,6 @@ namespace _20_Lab4_4 {
 		RegisterSuccessfull:
 			Console.WriteLine(license);
 
-			// Далі тут має бути щось, але завдання фактично виконано.
 
 		}
 		/*
